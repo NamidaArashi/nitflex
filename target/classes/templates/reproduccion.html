@@ -1,0 +1,94 @@
+<!-- Nitflex -->
+<!-- Cristina y Alexey GII URJC -->
+
+<!-- Se ha usado Bootstrap para crear un diseño de aplicación web responsive, más bella en general y con un posicionamiento de objetos más sencilla.
+Tal posicionamiento se basa en el uso de filas (ej. rows) y columnas (ej. col-md-8) -->
+
+<!-- Esta página se utiliza como el index de la aplicación. Posee un menú de navegación, un buscador general y una presentación de las películas de la aplicación -->
+
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <!--Configuracion general-->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Aplicacion web de vídeos online tipo Netflix imaginaria. Permite hacer login de usuarios mostrar videos y reproducirlos." />
+    <meta name="author" content="Critina_y_Alexey_GII_URJC." />
+
+    <!-- Aplicacion web responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Titulo de la pagina-->
+    <title>Nitflex</title>
+
+    <!--Favicon de la pagina-->
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    
+    <!-- CSS de Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+
+    <!-- Nitflex CSS -->
+    <link href="css/nitflex.css" rel="stylesheet" type="text/css" />
+    <link href="css/flaticon.css" rel="stylesheet" type="text/css" />
+
+    <!-- Fuentes de Google y Bootstrap -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Open+Sans+Condensed:300' rel='stylesheet' type='text/css' />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+     
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+    
+</head>
+
+<!-- Mensaje por si JS no está activado. -->
+<noscript>
+    <p>Estás utilizando la aplicación web de Nitflex.</p>
+    <p>Esta aplicación hace uso de JavaScript. Si deseas disfrutar de todas las funcionalidades de la aplicación, te recomendamos que vuelvas a activar este complemento.</p>
+</noscript>
+
+<body>
+    
+    <!-- Seccion portfolio zonas -->
+    <section>
+        <div class="container">
+
+			<!-- Muestra una foto de cada zona guardada en la base de datos junto a su descripción en forma de grid de 3 columnas -->
+            <div class="row">
+                <div class="col-md-12">
+                    <iframe width="560" height="315" th:src="${peli.getUrl()}" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">Copyright &copy; Web Application developed by Cristina and Alexey 2017</p>
+                </div>
+            </div>
+    	</div>
+    </footer>
+    
+    <!-- JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Nitflex JavaScript -->
+    <script src="js/nitflex.js"></script>
+    
+</body>
+</html>

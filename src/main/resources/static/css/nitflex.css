@@ -1,0 +1,404 @@
+@CHARSET "ISO-8859-1";
+/*
+ * Parque Natural
+ * Cristina, GII, URJC
+ */
+
+/* CSS de carácter general */
+
+div {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+	padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    background-color: #0B0B0B;
+}
+
+p {
+    line-height: 1.5;
+    margin: 30px;
+}
+
+p a {
+    color: #fff;
+    font-weight: 800;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 800;
+}
+
+a {
+    color: #fff;
+    font-weight: 800;
+}
+
+a:hover,
+a:focus {
+    color: #d80027;
+    text-decoration: none;
+}
+
+a img:hover,
+a img:focus {
+    cursor: pointer;
+}
+
+img:hover,
+img:focus {
+    cursor: pointer;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+/* CSS Bootstrap para conseguir el menú tipo fixed especial que se usa en el proyecto */
+.navbar-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 800;
+}
+
+.navbar-custom .nav li a {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+@media only screen and (min-width:768px) {
+    .navbar-custom {
+        background: 0 0;
+        border-bottom: 1px solid transparent;
+    }
+    .navbar-custom .navbar-brand {
+        color: #fff;
+        padding: 20px;
+    }
+    .navbar-custom .navbar-brand:hover,
+    .navbar-custom .navbar-brand:focus {
+        color: #d80027;
+    }
+    .navbar-custom .nav li a {
+        color: #fff;
+        padding: 20px
+    }
+    .navbar-custom .nav li a:hover,
+    .navbar-custom .nav li a:focus {
+        color: #fff;
+        background-color: #d80027;
+    }
+}
+
+@media only screen and (min-width:1170px) {
+    .navbar-custom {
+        -moz-transition: background-color .3s;
+        transition: background-color .3s;
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden
+    }
+    .navbar-custom.is-fixed {
+        position: fixed;
+        top: -61px;
+        background-color: rgba(0, 0, 0, .5);
+        border-bottom: 1px solid rgb(0, 0, 0);
+        -moz-transition: -moz-transform .3s;
+        transition: transform .3s
+    }
+    .navbar-custom.is-fixed .navbar-brand {
+        color: #fff;
+    }
+    .navbar-custom.is-fixed .navbar-brand:hover,
+    .navbar-custom.is-fixed .navbar-brand:focus {
+        color: #d80027;
+    }
+    .navbar-custom.is-fixed .nav li a {
+        color: #fff;
+    }
+    .navbar-custom.is-fixed .nav li a:hover,
+    .navbar-custom.is-fixed .nav li a:focus {
+        background-color: #d80027;
+        color: #fff;
+    }
+    .navbar-custom.is-visible {
+        -moz-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+/* CSS del header, encargado del encabezado de la página y el buscador: tipo de letra, espaciado,
+recuadro negro semitrasparente... */
+.intro-header {
+    background-color: gray;
+    background: no-repeat center center;
+    background-attachment: scroll;
+    -moz-background-size: cover;
+    background-size: cover;
+    margin-bottom: 40px;
+}
+
+.intro-header .page-heading {
+	padding: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: #fff;
+}
+
+.intro-header .site-heading {
+	padding: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #fff;
+}
+
+.sin-presentacion {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.intro-header .site-heading h1,
+.intro-header .page-heading h1 {
+    margin-top: 0;
+    font-size: 80px
+}
+
+.intro-header .site-heading .subheading,
+.intro-header .page-heading .subheading {
+    font-size: 28px;
+    line-height: 1.1;
+    display: block;
+    font-weight: 300;
+    margin: 10px 0 0
+}
+
+.intro-header .site-heading,
+.intro-header .page-heading {
+    text-align: center
+}
+
+.back-negro {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.sin-margen {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.padd {
+    padding-left: 2em;
+    padding-bottom: 2px;
+}
+
+.text {
+    border: none;
+    border-radius: 0px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.text[type=text]:focus {
+    border-bottom: 3px solid #d80027;
+}
+
+.buscar {
+    border: none;
+    border-radius: 0px;
+    color: #fff;
+    background-color: #d80027;
+}
+
+#conj-buscador {
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+.tit-img {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.tit-port {
+	font-family: Josefin Sans;
+	font-weight: bold;
+	font-style: normal;
+	color: #fff;
+}
+
+.estiloNormal {
+	font-style: normal;
+}
+
+.mostrarNegro {
+	background-color: #fff;
+	border: 3px solid #fff;
+	border-bottom: none;
+	-moz-box-shadow: inset 0 0 0 3px #fff;
+    box-shadow: inset 0 0 0 3px #fff;
+    padding: 1em;
+}
+
+.cuadro {
+	border: 3px solid #fff;
+	border-top: none;
+	-moz-box-shadow: inset 0 0 0 3px #fff;
+    box-shadow: inset 0 0 0 3px #fff;
+    padding: 1em;
+    padding-top: 0.5em;
+}
+
+.cuadro2 {
+	color: #fff;
+	border-bottom: none;
+	-moz-box-shadow: inset 0 0 0 3px #fff;
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+.altura {
+	height: 325px;
+	margin: 10px;
+}
+
+.altura2 {
+	height: 400px;
+	margin: 10px;
+}
+
+.altura3 {
+	height: 550px;
+	margin: 10px;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0 20px;
+    background-color: #404040;
+    border-top: solid 4px #d80027;
+}
+
+footer .copyright {
+    margin: 0;
+    padding: 0;
+    color: #ebebeb;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Estilos CSS de botones */
+
+/* General */
+.button {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    margin: 1em;
+    min-width: 150px;
+    max-width: 250px;
+    display: inline;
+    background: none;
+    color: inherit;
+    position: relative;
+    z-index: 1;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.button:focus {
+    outline: none;
+}
+
+/* Boton busqueda simple */
+.button1 {
+    color: #fff;
+    background-color: #d80027;
+    border: none;
+    border-radius: 0;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 1px;
+    outline: none;
+}
+
+.button2 {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #d80027;
+    border: none;
+    border-radius: 0;
+    font-weight: 700;
+    margin: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.buttonlogin {
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #d80027;
+    border: none;
+    border-radius: 0;
+    font-weight: 700;
+    margin: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.button1:hover,
+.button1:focus,
+.button1:active,
+.button2:hover,
+.button2:focus,
+.button2:active,
+.buttonlogin:focus,
+.buttonlogin:active {
+    background-color: #d80027;
+    font-weight: 800;
+    outline: none;
+}
+
+.labellogin {
+	color: #d80027 !important;
+}
+
+.formlogin {
+	background-color: rgba(0,0,0,0.5);
+	padding: 1em;
+}
